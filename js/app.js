@@ -54,6 +54,7 @@ window.addEventListener("scroll", () => {
   const scrollDown = document.querySelector(".main__scroll-down");
   const hero = document.querySelector(".main__hero");
   const bodyTop = (document.body.getBoundingClientRect()).top;
+  // attribute to @lehollandaisvolant and his "Simple JS scroll-direction detection" pen
   
   if (bodyTop < scrollPos) { // direction is down
     scrollDown.classList.add("invisible");
