@@ -4,56 +4,76 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <title>Green Tea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
+  <header id="header" class="page__header">
     <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
       <ul id="navbar__list"></ul>
     </nav>
   </header>
   <main>
     <header class="main__hero">
-      <h1>Landing Page </h1>
+      <h1>Best Green Teas</h1>
+      <div class="main__scroll-down"></div>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
+    <section id="section1" data-nav="Sencha" class="main__section">
       <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <h2>Sencha</h2>
+        <p>Sencha (煎茶) is a type of Japanese ryokucha (緑茶, green tea) which is prepared by infusing the processed whole tea leaves in hot water. This is as opposed to matcha (抹茶), powdered Japanese green tea, where the green tea powder is mixed with hot water and therefore the leaf itself is included in the beverage. Sencha is the most popular tea in Japan.</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        <p>Among the types of Japanese green tea prepared by infusion, "sencha" is distinguished from such specific types as gyokuro in that it is shaded for a shorter time or not at all, or bancha which is the same tea but harvested later in the season. It is the most popular tea in Japan, representing about 80 percent of the tea produced in the country.</p>
+
+        <p>The flavour depends upon the season and place where it is produced, but shincha, or "new tea" from the first flush of the year, is considered the most delicious. Tea-picking in Japan begins in the south, gradually moving north with the spring warmth. During the winter, tea plants store nutrients, and the tender new leaves which sprout in the spring contain concentrated nutrients. Shincha represents these tender new leaves. The shincha season, depending upon the region of the plantation, is from early April to late May, specifically the 88th day after Setsubun which usually falls around February 4, a cross-quarter day traditionally considered the start of spring in Japan. Setsubun or Risshun is the beginning of the sexagenary cycle; therefore, by drinking sencha one can enjoy a year of good health.</p>
+          
+        <p>The ideal colour of the sencha beverage is a greenish golden colour. Depending upon the temperature of the water in which it is decocted, the flavour will be different, adding to the appeal of sencha. With relatively more temperate water, it is relatively mellow; with hot water, it is more astringent. Some varieties expand when steeped to resemble leaf vegetable greens in smell, appearance, and taste.</p>
+        
+        <p>The tea production process by which sencha and other Japanese ryokucha are created differs from Chinese green teas, which are initially pan-fired. Japanese green tea is first steamed for between 15–20 seconds to prevent oxidization of the leaves. Then, the leaves are rolled, shaped, and dried. This step creates the customary thin cylindrical shape of the tea. Finally, the leaves are sorted and divided into differing quality groups.</p>
+        
+        <p>The initial steaming step imparts a difference in the flavour between Chinese and Japanese green tea, with Japanese green tea having a more vegetal, almost grassy flavour (some taste seaweed-like). Infusions from sencha and other green teas that are steamed (like most common Japanese green teas) are also greener in colour and slightly more bitter than Chinese-style green teas.</p>
       </div>
     </section>
-    <section id="section2" data-nav="Section 2">
+    <section id="section2" data-nav="Bancha" class="main__section">
       <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <h2>Bancha</h2>
+        <p>Bancha (番茶) is a type of Japanese green tea. It is harvested from the second flush of sencha between summer and autumn. (The first flush is harvested for shincha.)</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        <p>It can be found in a number of forms such as roasted, unroasted, smoked, matured or fermented for three years and even post-fermented. For example, goishicha.</p>
+
+        <p>Bancha is harvested from the same tea tree as sencha grade, but it is plucked later than sencha is, giving it a lower market grade. It is considered to be one of the lowest grades of Japanese green teas. There are 22 grades of bancha. Its flavour is unique and varies depending on the type.</p>
+        <p>Flavours range from smoke, roasted nuts, green grass, earth, soil, wet leaves, some of the types of bancha have a stronger straw smell.</p>
       </div>
     </section>
-    <section id="section3" data-nav="Section 3">
+    <section id="section3" data-nav="Kukicha" class="main__section">
       <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <h2>Kukicha</h2>
+        <p>Kukicha (茎茶), or twig tea, also known as bōcha (棒茶), is a Japanese blend made of stems, stalks, and twigs. It is available as a green tea or in more oxidised processing. Kukicha has a unique flavour and aroma among teas, due to its being composed of parts of the tea plant that are excluded from most other teas.</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        <p>Regular kukicha material comes from production of sencha or matcha. When coming from gyokuro's production, it takes the name karigane (雁ヶ音 / かりがね) or shiraore (白折 / しらおれ).</p>
+
+        <p>Kukicha has a mildly nutty and slightly creamy sweet flavour. It is made of four sorts of stems, stalks, and twigs of Camellia sinensis. For best results, kukicha is steeped in water between 70 and 80 °C (158 and 176 °F). Green varieties are best steeped for less than one minute (oversteeping or steeping too hot, as with all green teas, results in a bitter, unsavoury brew).</p>
+
+        <p>It is common to steep kukicha for three or four infusions.</p>
+
+        <p>Kukicha is one of the preferred teas of the macrobiotic diet.</p>
       </div>
     </section>
+    <section id="section4" data-nav="Longjing" class="main__section">
+      <div class="landing__container">
+        <h2>Longjing</h2>
+        <p>Longjing tea (simplified Chinese: 龙井茶; traditional Chinese: 龍井茶; pinyin: lóngjǐng chá), sometimes called by its literal translated name Dragon Well tea, is a variety of pan-roasted green tea from the area of Longjing Village in Hangzhou, Zhejiang Province, China. It is produced mostly by hand and renowned for its high quality, earning it the China Famous Tea title.</p>
+      </div>
+    </section>
+    <div class="main__scroll-top"></div>
   </main>
   <footer class="page__footer">
-    <p>&copy Christiane Pruckner</p>
+    <p>&copy 2021 Christiane Pruckner</p>
+    <div class="page__footer-icon"></div>
   </footer>
-
+  <script src="./js/app.js"></script>
 </body>
 </html>
