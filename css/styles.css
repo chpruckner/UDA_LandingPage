@@ -150,7 +150,6 @@ main {
 
 /* Header Styles */
 .page__header {
-  background: #fff;
   position: fixed;
   top: 0;
   width: 100%;

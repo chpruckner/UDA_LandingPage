@@ -40,11 +40,7 @@ firstSection.style.paddingTop = `-${headerHeight}px`;
 
 const isInViewport = (element) => {
   const currentPos = element.getBoundingClientRect();
-  // console.log(currentPos);
   return (
-    //currentPos.top >= 0 &&
-    /* currentPos.top < (window.innerHeight || document.documentElement.clientHeight) &&
-    currentPos.bottom >= (window.innerHeight || document.documentElement.clientHeight) */
     currentPos.top < window.innerHeight * 0.8  &&
     currentPos.bottom >= window.innerHeight * 0.8
   );
@@ -86,13 +82,6 @@ window.addEventListener("scroll", () => {
 
   for (const sect of sections) {
     const currentNavEl = document.getElementById(`${sect.id}-link`);
-
-    /* DEBUG
-    const pos = sect.getBoundingClientRect();
-    const top = pos.top;
-    const bottom = pos.bottom;
-    const section = sect.id;
-    console.log(`${section}: top ${top}, bottom ${bottom}`); */
 
     if (isInViewport(sect)) {
       currentNavEl.classList.add("active");
