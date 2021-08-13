@@ -1,5 +1,12 @@
+/* global variables */
 const sections = document.querySelectorAll("section");
 const navUl = document.querySelector("#navbar__list");
+const downButton = document.querySelector(".main__scroll-down");
+const scrollUp = document.querySelector(".main__scroll-top");
+const screenTop = document.querySelector("body");
+const headerHeight = document.getElementById("header").offsetHeight;
+const firstSection = sections[0];
+
 const navBar = sections.forEach( (el) => {
   const navLi = document.createElement("li");
   navLi.classList.add("menu__item");
@@ -21,20 +28,14 @@ const navBar = sections.forEach( (el) => {
 
 });
 
-const downButton = document.querySelector(".main__scroll-down");
 downButton.addEventListener("click", () => {
   sections[0].scrollIntoView({behavior: "smooth"});
 })
-
-const scrollUp = document.querySelector(".main__scroll-top");
-const screenTop = document.querySelector("body");
 
 scrollUp.addEventListener("click", () => {
   screenTop.scrollIntoView({behavior: "smooth"});
 });
 
-const headerHeight = document.getElementById("header").offsetHeight;
-const firstSection = sections[0];
 firstSection.style.marginTop = `${headerHeight}px`;
 firstSection.style.paddingTop = `-${headerHeight}px`;
 

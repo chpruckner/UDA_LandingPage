@@ -131,6 +131,7 @@ main {
 
 .navbar__menu li {
   display: inline-block;
+  cursor: pointer;
 }
 
 .navbar__menu .menu__link {
